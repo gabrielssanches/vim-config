@@ -1,7 +1,10 @@
 " general configuration
 set number autoindent tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+
+set backspace=indent,eol,start
+
 syntax on
-colorscheme elflord
+colorscheme desert
 
 " position cursor on previously opened file
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
@@ -41,6 +44,12 @@ autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 " ensure normal tabs in assembly files
 " and set to NASM syntax highlighting
 autocmd FileType asm set noexpandtab shiftwidth=8 softtabstop=0 syntax=nasm
+
+autocmd FileType dts,dtsi setlocal noexpandtab
+
+" Termdebug
+let g:termdebug_wide=1
+packadd termdebug
 
 " status line
 set laststatus=2
