@@ -4,7 +4,7 @@ set number autoindent tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 set backspace=indent,eol,start
 
 syntax on
-colorscheme desert
+colorscheme sorbet
 
 " position cursor on previously opened file
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
